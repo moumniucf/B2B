@@ -1,0 +1,279 @@
+# Born2beroot
+
+1. How the virtual machines work?
+
+- **A virtual machine (VM)** is a virtual environment that works like a computer inside of a computer. It will run on an isolated partition of its host computer with its own resources of CPU power, memory, an operating system, and other resources. Virtualization uses software to simulate virtual hardware that allows multiple VMs to run on a single machine. The physical machine is known as the host while the VMs running on it are called guests. This process is managed by software known as a hypervisor.
+
+- Virtualization allow us share a system with multiple virtual environments. 
+
+- The hypervisor manages the hardware system and separate the physical resources from the virtual environments. **The resources are managed following the needs, from the host to the guests.**
+- When a user from a VM do a task that requires additional resources from the physical environment, the hypervisor manages the request so that the guest OS could access the resources of the physical environment.
+
+Once we know how they work, it is a good idea to see all the advantages we get from using virtual machines
+
+- Different guest machines hosted on our computer **can run different operating systems**, so we will have different OS working on the same machine.
+- They provide an environment in which **to safely test unstable programs** to see if they will affect the system or not.
+- We get **better use of shared resources.**
+- We **reduce costs** by reducing physical architecture.
+- They are **easy to implement** because they provide mechanisms to clone a virtual machine to another physical device.
+
+- A **Virtual Machine** (VM) is a compute resource that uses software instead of a physical computer to run programs and deploy apps. One or more virtual “guest” machines run on a physical “host” machine.  Each virtual machine runs its own operating system and functions separately from the other VMs, even when they are all running on the same host. This means that, for example, a virtual MacOS virtual machine can run on a physical PC.
+
+
+![Untitled](https://Born2beroot/assets/123767564/d320c025-9e4b-45e2-9fa1-86a88821ae62)
+
+
+If you’re wondering what’s VM, the answer actually isn’t too complicated. The main purpose of VMs is to operate multiple operating systems at the same time, from the same piece of hardware. Without virtualization, operating multiple systems — like Windows and Linux — would require two separate physical units.
+
+### 2. **What Is a Hypervisor?**
+
+
+![Untitled (1)](https://Born2beroot/assets/123767564/d6fbec02-9c23-4346-baca-069842bed871)
+
+
+**A hypervisor (Virtual Machine Monitor) is hardware, software, or firmware capable of creating virtual machines and then managing and allocating resources to them.**
+
+There are two types of hypervisors:
+
+- Type 1 (bare-metal) hypervisors run directly on the hardware.
+- Type 2 (hosted) hypervisors run on top of an existing operating system.
+
+- **Benefits of Hypervisor :**
+
+One of the main benefits of running virtual machines **is if one of them crashes**, it doesn’t affect the other virtual machines, or the main physical hardware or OS. This is because, although they use the same physical hardware, they’re logically separate from each other.
+
+Another reason to use a hypervisor and accompanying virtual machines is for security purposes. It creates another layer between your operating system and whatever questionable file you might be downloading or accessing from the internet. Even if the download causes a problem in your virtual machine, your primary OS will be protected by the hypervisor.
+
+### 3. APT vs APTITUDE
+
+- ****What is APT and Aptitude? and What’s real Difference Between Them?****
+
+**Apt** or **Advanced Packaging Tool** is a free and open source software which gracefully handles software installation and removal. Initially it was designed for Debian’s.
+
+---
+
+The most obvious difference is that aptitude provides a terminal menu interface (much like Synaptic in a terminal), whereas apt-get does not.
+
+- **`apt`:**  is a simple command-line tool without a graphical interface. It is efficient for scripting and non-interactive use.
+- **`aptitude`:**  provides a text-based interface that allows users to interactively browse and search for packages. It has a menu-driven interface that some users may find more intuitive.
+- Aptitude has a better package management than apt.
+- While removing any installed package, **Aptitude** will automatically remove unused packages, while **apt-get** would need user to explicitly specify this by either adding additional option of **`‘—auto-remove’`** or specifying **`‘apt-get autoremove’`**
+
+### 4. APPArmor
+
+AppArmor, short for "Application Armor," is a Linux security module that provides mandatory access control (MAC) for programs. It is designed to restrict the capabilities of individual applications, preventing them from accessing resources or performing actions that are not explicitly allowed. AppArmor works by defining security profiles for each application, specifying what resources the application is allowed to access and what operations it can perform.
+
+(![Untitled (1)sgdsfsdgsdg](https://Born2beroot/assets/123767564/1466e809-28f1-4520-89dc-31ee08a45570)
+(htttps://github.com/YounesMoukhlij/Born2beroot/assets/123767564/08f3d9a0-215a-43fa-b37d-737f357f3b52)
+
+
+For example, if an installed application can take photos by accessing the camera application, but the administrator denies this privilege, the application will not be able to access the camera application. If a vulnerability occurs (some of the restricted tasks are performed), AppArmor blocks the application so that the damage does not spread to the rest of the system.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/2980d06d-0e74-4366-860f-548baf9351c6/b707c3f7-c14a-4ee5-9934-9c47fe3eeeb0/Untitled.png)
+
+### 5. SSH
+
+Or **Secure Shell** is a **remote administration protocol that allows users to control and modify their servers** over the Internet thanks to an authentication mechanism.
+
+SSH, also known as Secure Shell or Secure Socket Shell, is a [network protocol](https://www.techtarget.com/searchnetworking/definition/protocol) that gives users, particularly system administrators, a secure way to access a computer over an unsecured network.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/2980d06d-0e74-4366-860f-548baf9351c6/e6c1a602-417b-4efa-a59b-8183555cb292/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/2980d06d-0e74-4366-860f-548baf9351c6/96a3f63a-2ebd-4c86-aab8-3ab5e50918be/Untitled.png)
+
+UFW (Uncomplicated Firewall) is a tool that helps manage the firewall rules on a Linux system. When you allow a specific port (such as port 22 for SSH) using UFW, you are essentially granting permission for incoming network traffic on that port. In the case of SSH, this means allowing connections to the SSH server running on your computer.
+
+### 6 • Cron
+
+A cron job is a task automated using cron, a scheduler tool on a Unix-like operating system. Common cron jobs include creating a backup, updating software, clearing the cache, and monitoring the server.
+
+Creating cron jobs helps reduce human error and save time as you don’t need to repeatedly perform the same tasks.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/2980d06d-0e74-4366-860f-548baf9351c6/9831a9be-929a-4f54-8656-cb3a6e83fbd1/Untitled.png)
+
+### 7 • Su
+
+- **whats su ?**
+
+In Linux, "su" stands for "switch user" or "substitute user." It is a command-line utility that allows a superuser or any authorized user to change their current user ID (UID) to that of another user, typically the superusr or root. This is often used to execute commands with elevated privileges.
+
+The basic syntax of the "su" command is:
+
+```bash
+su [username]
+```
+
+If you run "su" without specifying a username, it will default to switching to the superuser (root) account. You will be prompted to enter the password of the target user.
+
+For example, if you want to switch to the root user, you would type:
+
+```bash
+su
+```
+
+If you want to switch to another user, you would specify that user's name, like:
+
+```bash
+su username
+```
+
+After entering the correct password, you'll have the permissions associated with the specified user.
+
+It's worth noting that in more modern systems, the "sudo" command is often preferred for performing single commands with elevated privileges. "sudo" allows a permitted user to execute a command as the superuser or another user, as specified by the security policy. It provides a more fine-grained control over who can execute privileged commands and is generally considered a more secure approach.
+
+### 8 • Defending
+
+- **Differences between CentOS and Debian**
+
+CentOS: Imported RHEL released by RedHat, changed only the logo, supported by a large community, RPM package format / uses YUM and DNF as package managers, CentOS has a slight advantage over Debian in supporting desktop applications, enterprise level used in
+
+Debian: Built and supported by a group of individuals within the Debian project, DEB package format / uses dpkg and APT as package managers, has many packages, simple to install and upgrade packages, widely used by individual users
+
+- **aptitude, apt, apt-get**
+
+All three are free, open source software that handles software installation and removal gracefully.
+
+dpkg: package manager prototype
+
+apt-get: Package manager with dependency management
+
+apt: apt simplifies the functions of apt-get and provides a user-friendly UI to make it easier to use.
+
+aptitude: Suggests appropriate action in case of conflict during package installation or deletion, automatically removes unused packages, is a higher-level package manager than apt-get or apt.
+
+- **DAC, MAC**
+
+Discretionary Access Control: Owner controls access to resources by users or groups.
+
+Mandatory Access Control: Control the behavior of users and processes using defined policies
+
+- **APPArmor**
+
+Linux kernel security module that allows system administrators to limit the capabilities of programs by program profile
+
+Supports the traditional UNIX discretionary access control model (DAC) by providing mandatory access control (MAC)
+
+Focus on protecting individual applications, implementing a security model at the application level
+
+APPArmor is purely based on policy files
+
+- **sudo & sudoers**
+
+sudo: In Unix and Unix-like operating systems, a program that allows you to run programs with the security privileges of another user, usually as superuser.
+
+root has unlimited privileges ⇒ The priority for intruders is to obtain root privileges
+
+If multiple people share the root password, it becomes difficult to change it regularly and the probability of external exposure increases.
+
+Log tracking becomes easier.
+
+sudoers: If you grant sudo privileges to all accounts, there is a big security problem.
+
+Therefore, through the config file of the sudo command called /etc/sudoers, accounts that can use sudo are restricted and security is strengthened with several settings.
+
+If you make a mistake while editing the /etc/sudoers file directly, you will not be able to use sudo. visudo checks grammar.
+
+- **LVM**
+
+It is a part of the kernel and a program to manage Logical Volume efficiently and flexibly, and allows creation of logical storage by creating an abstract layer beyond physical storage.
+
+Partition: The concept of dividing something into several. LVM: Combining multiple disk spaces and scrap spaces into one.
+
+Reasons for use: To combine multiple disk spaces and use them as one, to utilize disk partitions with spaces that are difficult to use, and to expand the disk space already in use.
+
+- **SSH**
+
+It is an abbreviation for Secure Shell Protocol. It is one of the network protocols and is used to communicate safely and securely when computers communicate with each other over a public network such as the Internet.
+
+ssh uses public key encryption. Encryption is performed before sending the message using the public key. Decryption is not possible. It is stored inside your computer as a private key that should never be exposed to the outside. It is decrypted through this.
+
+- **Firewall**
+
+A system to protect internal information assets from external illegal intrusion by unifying and managing network paths requiring security.
+
+Advantages include user authentication, address conversion, and audit records, but cannot protect against threats that exist in the form of malware such as viruses.
+
+- **ufw**
+
+An abbreviation for Uncomplicated Firewall, it is an easy-to-use firewall management program that operates on Debian and various Linux environments. It uses iptable to configure the program. (iptable settings and management are very complicated)
+
+The kernel, the core of Linux, has a module called netfilter that controls network access of clients to the server, and the program that uses it to establish network policies for server access is called Firewall. It does not work immediately after installation, and you must work in the terminal to have the firewall automatically activated in the background even when the system starts.
+
+iptable: A user-space application that allows system administrators to configure the tables provided by the Linux kernel firewall and the chains and rules that store them.
+
+- **cron**
+
+A command that automatically performs a task at a specific time or at a specific time
+
+- **crontab**
+
+File that sets up cron jobs
+
+The cron process performs tasks by reading what is set in the /etc/crontab file.
+
+***Minute Hour Day Monday Command***
+
+**/usr/sbin/anacron**
+
+A program that operates like cron and is a tool used to ensure that tasks are executed even when the server is stopped for a certain period of time.
+
+**/etc/cron.daily /etc/cron.weekly /etc/cron.monthly**
+
+System cron settings directory, cron operates by periodically placing content to be executed in the system cron settings directory.
+
+**/var/log/cron**
+
+Cron execution records
+
+ 
+
+- change the hostname : sudo hostname new-hostname
+- change
+
+### 9 • Password
+
+- `retry=3`
+    
+    : Enter password up to 3 times
+    
+- `minlen=10`
+    
+    : Password minimum length 10
+    
+- `difok=7`
+    
+    : Number of characters that must be different from the existing password (7)
+    
+- `ucredit=-1`
+    
+    : 1 or more uppercase letters
+    
+- `lcredit=-1`
+    
+    : At least 1 lowercase letter
+    
+- `dcredit=-1`
+    
+    : 1 or more numbers
+    
+- `maxrepeat=3`
+    
+    : Continuous use of up to 3 overlapping characters is possible.
+    
+- `reject_username`
+    
+    : Check whether the username is included in the password as is or reversed, and if so, reject it.
+    
+- `enforce_for_root`
+    
+    : Apply the password policy to root as well
+    
+- In the case of password policy, it is applied only to users or passwords created after policy setting. Change the password to a stronger password for existing users and root, and run the following commands to apply the password period.
+
+- PASS_MAX_DAYS 30: Password must expire every 30 days
+- PASS_MIN_DAYS 2: Password must be used for at least 2 days. In other words, you can change your password after 2 days.
+- PASS_WARN_AGE 7: Users should receive a warning message 7 days before their password expires.
+
+- `$ passwd -e [user_name]` - You must forcefully change your password.
+- delete a user  `$ userdel`
+- delete a group `$ groupdel`

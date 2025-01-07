@@ -201,17 +201,14 @@ To schedule the broadcast every 10 minutes, we need to enable cron:
 # systemctl enable cron
 Then start a crontab file for root:
 
-# crontab -e
+# sudo crontab -e
 And add the job like this:
 
-*/10 * * * * bash /root/monitoring.sh
+@reboot bash /usr/local/bin/sleep.sh
 Or, if the wall command isn't incorporated into the monitoring script:
 
 */10 * * * * bash /root/monitoring.sh | wall
 From here, monitoring.sh will be executed every 10th minute. To make it execute every ten minutes from system startup, we can create a sleep.sh script that calculates the delay between server startup time and the tenth minute of the hour, then add it to the cron job to apply the delay.
-
-*/10 * * * * bash /root/sleep.sh && bash /root/monitoring.sh
-Failed to send host log message
 The error message that appears at VM boot, "[drm:vmw_host_log [vmwgfx]] ERROR Failed to send host log message" can easily be fixed. It is a graphics controller error. All we have to do is:
 
 Shut down VM
